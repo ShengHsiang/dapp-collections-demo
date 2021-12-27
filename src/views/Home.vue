@@ -3,6 +3,8 @@
     <div class="container mx-auto px-2 2xl:px-8 py-4 md:py-8">
       <Loading v-if="loading" />
 
+      <h2 class="text-sm md:text-base text-center text-white mb-4 line-clamp-2">{{ account }}</h2>
+
       <!-- Has assets -->
       <section
         v-infinite-scroll="fetchAccountAssets(account)"
