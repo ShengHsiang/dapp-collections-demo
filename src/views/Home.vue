@@ -1,9 +1,9 @@
 <template>
   <BaseLayout>
     <div class="container mx-auto px-2 2xl:px-8 py-4 md:py-8">
-      <Loading v-if="loading" />
-
       <h2 class="text-sm md:text-base text-center text-white mb-4 line-clamp-2">{{ account }}</h2>
+
+      <Loading v-if="loading" />
 
       <!-- Has assets -->
       <section
@@ -18,7 +18,7 @@
 
       <!-- No assets found. -->
       <section v-if="!loading && assetsList.length === 0">
-        <p class="text-center text-white">
+        <p class="text-center text-gray-600">
           No assets found.
         </p>
       </section>

@@ -10,7 +10,7 @@
     "
     @click="handleClickItem"
   >
-    <img :src="asset.image_url" :alt="asset.name" class="w-full object-cover" />
+    <img v-lazy="asset.image_url" :alt="asset.name" class="w-full object-cover" />
     <div class="flex flex-col items-center p-4">
       <h2 class="text-white mb-4">{{ asset.name }}</h2>
     </div>
