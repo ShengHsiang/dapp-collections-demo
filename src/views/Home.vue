@@ -46,6 +46,12 @@ export default {
   mounted () {
     this.fetchAccountAssets(this.account)
   },
+  watch: {
+    account (newAccount) {
+      this.offset = 0
+      this.fetchAccountAssets(newAccount)
+    }
+  },
   methods: {
     async fetchAccountAssets (account) {
       try {
