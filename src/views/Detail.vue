@@ -35,7 +35,15 @@
             :alt="asset.name"
             class="w-full object-cover"
           />
-          <h3 class="text-yellow-600 text-lg md:text-2xl font-bold text-center mb-4">
+          <h3
+            class="
+              text-yellow-600 text-lg
+              md:text-2xl
+              font-bold
+              text-center
+              mb-4
+            "
+          >
             {{ asset.name }}
           </h3>
           <p class="text-white mb-4 line-clamp-5">{{ asset.description }}</p>

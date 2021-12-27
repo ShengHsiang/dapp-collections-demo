@@ -11,7 +11,11 @@ yarn serve
 ```
 
 ### Description
-1. Project Demo link [https://shenghsiang.github.io/dapp-collections-demo/]
-2. Using github actions for CI/CD
-3. Using Tailwindcss for UI
-4. Using Metamask and web3.js for wallet
+
+[Project Demo link](https://shenghsiang.github.io/dapp-collections-demo/)
+
+1. Using github actions for CI/CD
+2. Using Tailwindcss for UI
+3. Using Metamask as a wallet
+4. Using vue-lazyload for image lazy loading
+5. Using vue-infinite-scroll for infinite scrolling

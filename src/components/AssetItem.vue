@@ -1,8 +1,18 @@
 <template>
-  <a class="block border border-gray-500 rounded cursor-pointer hover:shadow-lg max-w-xl" @click="handleClickItem">
-    <img :src="asset.image_url" :alt="asset.name" class="w-full object-cover" />
+  <a
+    class="
+      block
+      border border-gray-500
+      rounded
+      cursor-pointer
+      hover:shadow-lg
+      max-w-xl
+    "
+    @click="handleClickItem"
+  >
+    <img v-lazy="asset.image_url" :alt="asset.name" class="w-full object-cover" />
     <div class="flex flex-col items-center p-4">
-      <h2 class="text-white mb-4">{{asset.name}}</h2>
+      <h2 class="text-white mb-4">{{ asset.name }}</h2>
     </div>
   </a>
 </template>

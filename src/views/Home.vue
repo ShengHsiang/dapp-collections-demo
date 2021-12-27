@@ -1,16 +1,26 @@
 <template>
   <BaseLayout>
     <div class="container mx-auto px-2 2xl:px-8 py-4 md:py-8">
+      <h2 class="text-sm md:text-base text-center text-white mb-4 line-clamp-2">{{ account }}</h2>
+
       <Loading v-if="loading" />
 
+      <!-- Has assets -->
       <section
         v-infinite-scroll="fetchAccountAssets(account)"
-        v-if="!loading"
+        v-if="!loading && assetsList.length > 0"
         class="grid grid-cols-2 gap-4 md:gap-8"
       >
         <template v-for="asset of assetsList">
           <AssetItem :key="asset.id" :asset="asset" />
         </template>
+      </section>
+
+      <!-- No assets found. -->
+      <section v-if="!loading && assetsList.length === 0">
+        <p class="text-center text-gray-600">
+          No assets found.
+        </p>
       </section>
     </div>
   </BaseLayout>
@@ -46,6 +56,12 @@ export default {
   mounted () {
     this.fetchAccountAssets(this.account)
   },
+  watch: {
+    account (newAccount) {
+      this.resetAssetsList()
+      this.fetchAccountAssets(newAccount)
+    }
+  },
   methods: {
     async fetchAccountAssets (account) {
       try {
@@ -63,6 +79,10 @@ export default {
       } catch (error) {
         console.log(error)
       }
+    },
+    resetAssetsList () {
+      this.offset = 0
+      this.assetsList = []
     }
   }
 }
