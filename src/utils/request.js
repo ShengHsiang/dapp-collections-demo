@@ -1,7 +1,7 @@
 import axios from 'axios'
 // import { getToken } from '@/utils/auth'
 // import store from '@/stores'
-const DEFAULT_API_URI = 'https://localhost:3000'
+const DEFAULT_API_URI = 'https://api.opensea.io/api/v1'
 const DEFAULT_TIMEOUT = 30000
 
 // create an axios instance

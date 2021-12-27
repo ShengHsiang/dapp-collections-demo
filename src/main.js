@@ -3,7 +3,9 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import './assets/styles/main.scss'
+import infiniteScroll from 'vue-infinite-scroll'
 
+Vue.use(infiniteScroll)
 Vue.config.productionTip = false
 
 new Vue({
