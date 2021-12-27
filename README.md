@@ -10,17 +10,8 @@ yarn install
 yarn serve
 ```
 
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Run your unit tests
-```
-yarn test:unit
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
+### Description
+1. Project Demo link [https://shenghsiang.github.io/dapp-collections-demo/]
+2. Using github actions for CI/CD
+3. Using Tailwindcss for UI
+4. Using Metamask and web3.js for wallet

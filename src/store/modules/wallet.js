@@ -1,13 +1,13 @@
 const getDefaultState = () => (
   {
-    datas: 'asdasd'
+    account: '0x960DE9907A2e2f5363646d48D7FB675Cd2892e91'
   }
 )
 
 const state = getDefaultState()
 
 const getters = {
-  datas: state => state.datas
+  getAccount: state => state.account
 }
 
 const mutations = {
